@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+	<convoyControl 
+		statusBarHideInterval="60000" 
+		allowedLagDistance="5000"
+		verifyingLagDistanceInterval="60000" />
+	
+	<services>
+		<service 
+			class="CCS.Application.Services.GoogleMapsService"
+			maxRequests="1000" 
+			activationInterval="86400000" 
+			connectionString="http://maps.google.com/staticmap" >
+			<keys>
+				<key 
+					name="key1" 
+					value="ABQIAAAANRaqTcLhNV1FYRSFb1cGBhTGYpAjRLmpisdH_BT0DGd8IgMxkBRiOQ2S8BePwvFGBaiiEDK4IOp2xw" />
+				<key 
+					name="key2" 
+					value="ABQIAAAANRaqTcLhNV1FYRSFb1cGBhR1zsHgDbAL-baK6SDCfiDSXxMZnRSTO6ollExbwJbWCVIFXtm12m4-JA" />
+				<key 
+					name="key3" 
+					value="ABQIAAAANRaqTcLhNV1FYRSFb1cGBhS0qqvTJ0efNpjBf9tcLY_ueuz83RQC1by37dXeUYYjA2BpHChgYWSs2A"/>
+				<key 
+					name="key4" 
+					value="ABQIAAAANRaqTcLhNV1FYRSFb1cGBhTZ_HvsjXwfo4Bo9ybC0VEq6Dh9ohS8UwkQLr7T_nLqe70Ioe14RsbQhA"/>
+				<key 
+					name="key5" 
+					value="ABQIAAAANRaqTcLhNV1FYRSFb1cGBhRJs1osafCYvyKvN3H6Iy76hY6nSxRF2akyPD8o8IhYid8pjBgWOWrnOw" />		
+			</keys>
+		</service>
+		<service 
+	    	class="CCS.Application.Services.DataAccessService" 
+			maxRequests="0" 
+			activationInterval="0" 
+			connectionString="jdbc:mysql://sopra.informatik.uni-augsburg.de/gruppe12">
+			<keys>
+				<key 
+					name="login" 
+					value="gruppe12" />
+				<key 
+					name="password" 
+					value="0flemJie" />
+			</keys>
+		</service>
+		<service 
+			class="CCS.Application.Services.StopStationService" 
+			maxRequests="0" 
+			activationInterval="0" 
+			connectionString="http://localhost:8082/StopStation.Provider/StopStationHandler">
+			<keys>
+				<key 
+					name="radius" 
+					value="10000" />
+				<key 
+					name="stopArea"
+					value="500" />
+				<key 
+					name="stopDuration"
+					value="300000" />	
+			</keys>
+		</service>	
+		<service 
+			class="CCS.Application.Services.GnuiteService" 
+			maxRequests="0" 
+			activationInterval="0" 
+			connectionString="http://gnuite.com/cgi-bin/gpx.cgi">
+			<keys>
+				<key 
+					name="skipInterval"
+					value="10" />
+			</keys>
+		</service>		
+	</services>
+</application>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<connectionString url="jdbc:mysql://sopra.informatik.uni-augsburg.de/gruppe12" login="gruppe12" password="0flemJie" />
+</configuration>
